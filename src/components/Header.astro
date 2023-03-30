@@ -4,14 +4,14 @@ import ThemeToggle from "./ThemeToggle.astro"
 export const prerender = true
 ---
 
-<header class="sticky top--100px z-99 px-2em relative ">
-    <!-- <img  class="qr1   w-140px" src="/qr1.jpg" /> -->
+<header class="sticky top--100px z-99 px-2em relative">
+  <!-- <img  class="qr1   w-140px" src="/qr1.jpg" /> -->
   <div class="flex justify-between">
-    <div cl class="w-100px h-100px logo">
-        <Logo />
+    <div class="w-100px h-100px logo">
+      <Logo />
     </div>
     <div class="right_img">
-        <!-- <img id="themeToggle" class="qr2   h-100px" src="/qr2.jpg" /> -->
+      <!-- <img id="themeToggle" class="qr2   h-100px" src="/qr2.jpg" /> -->
     </div>
   </div>
   <div class="flex justify-between items-center py-1">
@@ -26,7 +26,6 @@ export const prerender = true
       <span class="ml-1 font-extrabold text-slate-7 dark:text-slate"
         >中国服务中心</span
       >
-    
     </div>
     <ThemeToggle />
   </div>
@@ -76,21 +75,21 @@ export const prerender = true
   .after #message-container {
     opacity: 1;
   }
-  .right_img{
-    display:flex;
+  .right_img {
+    display: flex;
   }
-  .qr1{
-    object-fit:scale-down;
-    position:fixed;
-    right:20px;
+  .qr1 {
+    object-fit: scale-down;
+    position: fixed;
+    right: 20px;
   }
-  .qr2{
-    object-fit:scale-down;
-    margin-top:-10px
+  .qr2 {
+    object-fit: scale-down;
+    margin-top: -10px;
   }
   @media (max-width: 900px) {
-  .qr1 {
-    display: none;
+    .qr1 {
+      display: none;
+    }
   }
-}
 </style>
