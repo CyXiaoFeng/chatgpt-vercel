@@ -1,6 +1,4 @@
 // #vercel-disable-blocks
-import { ProxyAgent, fetch } from "undici"
-// #vercel-end
 import { generatePayload, parseOpenAIStream } from "@/utils/openAI"
 import { verifySignature } from "@/utils/auth"
 import type { APIRoute } from "astro"
@@ -56,7 +54,7 @@ export const post: APIRoute = async context => {
   }
   const initOptions = generatePayload(apiKey, messages)
   // #vercel-disable-blocks
-  if (httpsProxy) initOptions.dispatcher = new ProxyAgent(httpsProxy)
+  // if (httpsProxy) initOptions.dispatcher = new ProxyAgent(httpsProxy)
   // #vercel-end
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
