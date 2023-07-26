@@ -6,11 +6,13 @@ const model = import.meta.env.OPENAI_API_MODEL || "gpt-3.5-turbo"
 
 export const generatePayload = (
   apiKey: string,
-  messages: ChatMessage[]
+  messages: ChatMessage[],
+  proxyAgent?:string
 ): RequestInit & { dispatcher?: any } => ({
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${apiKey}`
+    Authorization: `Bearer ${apiKey}`,
+    'Proxy': `${proxyAgent}`
   },
   method: "POST",
   body: JSON.stringify({
